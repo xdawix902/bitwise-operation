@@ -55,7 +55,16 @@ class Program
     }
     //Napisz funkcję OdwrocBity(int n), która zwróci liczbę, której bity są w odwrotnej kolejności
     static long trzy_z_gpt(long n){
-        
+        long odp = 0;
+        while(n>0){
+            //odp = odp | (n&1);
+            //odp = odp << 1;
+            //n = n >> 1; 
+            odp = (odp << 1) | (n&1);
+            n = n >> 1;
+        }
+        return odp;
+        //return odp>>1;
     }
     static void Main(string[] args)
     {
