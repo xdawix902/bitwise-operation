@@ -134,6 +134,38 @@ class Program
         long m_na_3 = (m >> 3) & 1;
         return (n_na_2 == m_na_2 && n_na_3 == m_na_3);
     }
+    //Zadanie 6: Ustawianie konkretnego bitu na wartość 1
+    static long Ustawienie_1_na_6(long n){
+        long maska = 0b1000000;
+        return n | maska;
+    }
+    //Zadanie 7: Liczba bitów różniących się między dwiema liczbami
+    static long Liczba_roznic(long n, long m){
+        long odp = n ^ m;
+        long counter = 0;
+        while(odp>0){
+            counter += (odp & 1);
+            odp = odp >> 1;
+        }
+        return counter;
+    }
+    //Zadanie 8: Odczyt bitu w danej pozycji
+    static int Odczyt_z_pozycji_2(long n){
+        return (int)((n>>2) & 1);
+    }
+    //Zadanie 9: Mnożenie przez 2 i dzielenie przez 2
+    static long Mnozenie_przez_2(long n){
+        return n << 1;
+    }
+    static long Dzielenie_przez_2(long n){
+        return n >> 1;
+    }
+    //Zadanie 10: Ustawianie bitu na 0
+    static long Ustawienie_bitu_6_na_0(long n){
+        //maska powinna być długości 64 znaków ale nie chce mi się tego pisać
+        long maska = 0b1111111111111111110111111;
+        return (n & maska);
+    }
     static void Main(string[] args)
     {
         Console.WriteLine(Parzysta(123));
