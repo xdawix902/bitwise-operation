@@ -78,7 +78,24 @@ class Program
         }
         return wynik;
     }
-    
+    //Dany jest ciąg liczb, w którym każda liczba występuje dokładnie dwa razy, oprócz jednej, która występuje raz. Napisz funkcję ZnajdzUnikalnaLiczbe(int[] arr), która znajdzie tę jedyną liczbę.
+    static long piec_z_gpt(long[] n){
+        //logiczne rozwiązanie ale chujnia bo n^2
+        /*for(int i = 0; i < n.Length; i++){
+            long jeden = n[i];
+            int counter = 0;
+            for(int j = i+1; j< n.Length; j++){
+                if((jeden ^ n[j]) == 0) counter ++;
+            }
+            if(counter == 0) return jeden;
+        } 
+        return -1;*/
+        long wynik = 0;
+        for(int i = 0; i < n.Length;i++){
+            wynik ^= n[i];
+        }
+        return wynik;
+    }
     static void Main(string[] args)
     {
         Console.WriteLine(Parzysta(123));
