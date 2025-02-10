@@ -96,6 +96,44 @@ class Program
         }
         return wynik;
     }
+    //Zadanie 1: Sprawdzenie, czy liczba jest potęgą 2
+    static bool zad1(long n){
+        long maska = ~n;
+        return n > 0 && ((n & maska)== 0); 
+    }
+    //Zadanie 2: Odwrócenie bitów w liczbie
+    static long zad2(long n){
+        long odp = 0;
+        while(n>0){
+            odp = (odp << 1) | (n & 1);
+            n = n >> 1;
+        }
+        return odp;
+    }
+    //Zadanie 3: Sprawdzenie, czy liczba jest liczbą parzystą lub nieparzystą
+    static bool CzyParzysta(long n){
+        return (n & 1) == 0;
+    }
+    static bool CzyNieparzysta(long n){
+        return (n&1) == 1;
+    }
+    //Zadanie 4: Zliczanie liczby bitów ustawionych na 1
+    static long IleJedynek(long n){
+        long counter = 0;
+        while(n>0){
+            if((n&1) == 1) counter ++;
+            n = n>>1;
+        }
+        return counter;
+    }
+    //Zadanie 5: Sprawdzanie, czy dwa liczby mają te same bity w określonych pozycjach
+    static bool Czy_2_3_takiesame(long n, long m){
+        long n_na_2 = (n >> 2) & 1;
+        long m_na_2 = (m >> 2) & 1;
+        long n_na_3 = (n >> 3) & 1;
+        long m_na_3 = (m >> 3) & 1;
+        return (n_na_2 == m_na_2 && n_na_3 == m_na_3);
+    }
     static void Main(string[] args)
     {
         Console.WriteLine(Parzysta(123));
