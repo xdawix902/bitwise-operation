@@ -66,6 +66,19 @@ class Program
         return odp;
         //return odp>>1;
     }
+    //Mnożenie binarnie
+    static long cztery_z_gpt(long a, long b){
+        long wynik = 0;
+        while(b != 0){
+            if((b&1) == 1){
+                wynik += a;
+            }
+            a = a << 1;
+            b = b >> 1;
+        }
+        return wynik;
+    }
+    
     static void Main(string[] args)
     {
         Console.WriteLine(Parzysta(123));
