@@ -1,34 +1,34 @@
-﻿using System.Diagnostics.Metrics;
-
-namespace Powtorka;
+﻿namespace Powtorzenie;
 
 class Program
 {
+
     //Zadanie: Liczenie izolowanych bitów
     static int CountIsolatedBits(int liczba){
-        int count = 0;
         int wzor = 0b010;
-        
+        int counter = 0;
+
         while(liczba > 0){
             int maska = liczba & 0b111;
-            if(maska == wzor) count++;
-            liczba = liczba >> 1;
+            if(maska == wzor) counter++;
+            liczba = liczba >> 1;            
         }
-        return count;
+        return counter;
     }
-    
+
+
     //Zadanie: Zamiana bitów w parach
     static int SwapBitsInPairs(int liczba){
         int odp = 0;
-        int i = 0;
+        int counter = 0;
+
         while(liczba > 0){
-            int maska = 0b11;
-            maska = liczba ^ maska;
-            odp = odp | (maska << 2*i);
+            int maska = liczba ^ 0b11;
+            odp = odp | (maska << 2*counter);
+            counter = counter + 1;
             liczba = liczba >> 2;
-            i++;
         }
-        return liczba;
+        return odp;
     }
 
 
@@ -41,21 +41,22 @@ class Program
 
         while(liczba > 0){
             int maska = liczba & 0b11;
-
-            if(maska == wzor1 || maska == wzor2) counter ++;
+            if(maska == wzor1 || maska == wzor2)counter++;
             liczba = liczba >> 1;
         }
         return counter;
     }
 
-    //#########2023#######
+
+
+    //Z tego roku
     static byte S3(int rejestr, byte wzor){
-        int maska = wzor & 0b11;
+        int schemat = wzor & 0b11;
         byte counter = 0;
 
-        while(rejestr > 0){
-            int liczba = rejestr & 0b11;
-            if(liczba == maska) counter += 1; 
+        while(rejestr>0){
+            int maska = rejestr & 0b11;
+            if(schemat == maska) counter++;
             rejestr = rejestr >> 1;
         }
         return counter;

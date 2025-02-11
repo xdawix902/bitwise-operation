@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadanie_nie_z_bitow", "Zada
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Powtorka", "Powtorka\Powtorka.csproj", "{850615F6-F124-4238-BC35-08D32624F2E7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Powtorzenie", "Powtorzenie\Powtorzenie.csproj", "{1403EB83-077D-4239-B26C-1E174E9A54D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{850615F6-F124-4238-BC35-08D32624F2E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{850615F6-F124-4238-BC35-08D32624F2E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{850615F6-F124-4238-BC35-08D32624F2E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1403EB83-077D-4239-B26C-1E174E9A54D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1403EB83-077D-4239-B26C-1E174E9A54D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1403EB83-077D-4239-B26C-1E174E9A54D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1403EB83-077D-4239-B26C-1E174E9A54D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
